@@ -1,0 +1,19 @@
+11-12-2012 09:34:14 - ERROR - Can't DROP 'name'; check that column/key exists
+11-12-2012 09:34:15 - ERROR - Table 'free.wp_newsletter' doesn't exist
+11-12-2012 09:34:15 - ERROR - Duplicate column name 'message'
+11-12-2012 09:34:15 - ERROR - Duplicate column name 'message_text'
+11-12-2012 09:34:15 - ERROR - Duplicate column name 'subject'
+11-12-2012 09:34:15 - ERROR - Duplicate column name 'type'
+11-12-2012 09:34:15 - ERROR - Duplicate column name 'created'
+11-12-2012 09:34:15 - ERROR - Duplicate column name 'status'
+11-12-2012 09:34:15 - ERROR - Duplicate column name 'total'
+11-12-2012 09:34:15 - ERROR - Duplicate column name 'last_id'
+11-12-2012 09:34:15 - ERROR - Duplicate column name 'sent'
+11-12-2012 09:34:15 - ERROR - Duplicate column name 'send_on'
+11-12-2012 09:34:15 - ERROR - Duplicate column name 'track'
+11-12-2012 09:34:15 - ERROR - Duplicate column name 'editor'
+11-12-2012 09:34:15 - ERROR - Duplicate column name 'sex'
+11-12-2012 09:34:15 - ERROR - Duplicate column name 'query'
+11-12-2012 09:34:15 - ERROR - Duplicate column name 'preferences'
+11-12-2012 09:34:15 - ERROR - Can't DROP 'name'; check that column/key exists
+11-12-2012 09:34:15 - ERROR - Table 'free.wp_newsletter' doesn't exist
