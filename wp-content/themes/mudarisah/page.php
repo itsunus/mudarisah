@@ -19,13 +19,10 @@
      
      <?php endwhile;  endif; ?>    
         
-        
-        
-        
-        
   	</div>
   </div>
   <div class="inner_left">
+      
 	<?php get_sidebar();?>
   </div>
   </div>

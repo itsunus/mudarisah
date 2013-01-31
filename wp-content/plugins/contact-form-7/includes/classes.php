@@ -128,7 +128,7 @@ class WPCF7_ContactForm {
 		if ( $frag = strstr( $url, '#' ) )
 			$url = substr( $url, 0, -strlen( $frag ) );
 
-		$url .= '#' . $this->unit_tag;
+		$url .= '?lang='.substr(get_bloginfo ( 'language' ), 0, 2).'#' . $this->unit_tag;
 
 		$url = apply_filters( 'wpcf7_form_action_url', $url );
 

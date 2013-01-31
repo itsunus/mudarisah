@@ -1,0 +1,17 @@
+21-01-2013 14:52:51 - ERROR - Table 'mudarisah.wp_newsletter_stats' doesn't exist
+21-01-2013 14:52:51 - ERROR - Table 'mudarisah.wp_newsletter_stats' doesn't exist
+21-01-2013 14:52:51 - ERROR - Table 'mudarisah.wp_newsletter_stats' doesn't exist
+21-01-2013 14:52:52 - ERROR - Duplicate column name 'user_id'
+21-01-2013 14:52:53 - ERROR - Unknown column 'newsletter_id' in 'wp_newsletter_stats'
+21-01-2013 14:52:53 - ERROR - Unknown column 'newsletter_id' in 'wp_newsletter_stats'
+21-01-2013 14:52:53 - ERROR - Unknown column 'date' in 'wp_newsletter_stats'
+21-01-2013 14:52:53 - ERROR - Duplicate column name 'user_id'
+21-01-2013 14:52:53 - ERROR - Duplicate column name 'email_id'
+21-01-2013 14:52:53 - ERROR - Duplicate column name 'link_id'
+21-01-2013 14:52:53 - ERROR - Duplicate column name 'user_id'
+21-01-2013 14:52:53 - ERROR - Duplicate column name 'created'
+21-01-2013 14:52:53 - ERROR - Duplicate column name 'url'
+21-01-2013 14:52:53 - ERROR - Duplicate column name 'anchor'
+21-01-2013 14:52:53 - ERROR - Duplicate column name 'email_id'
+21-01-2013 14:52:53 - ERROR - Duplicate column name 'token'
+21-01-2013 14:52:53 - ERROR - Duplicate column name 'text'

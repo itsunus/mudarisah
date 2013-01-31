@@ -14,6 +14,12 @@ if ( function_exists('register_sidebar') )
 	'after_title' => '</h2>', 
 	));
 
+	register_sidebar(array('name'=>'language',
+	'before_widget' => '<div id="%1$s" class="side-c %2$s">',
+	'after_widget' => '</div>', 
+	'before_title' => '<h2 class="inner_newsletter_heading">', 
+	'after_title' => '</h2>', 
+	));
 
 function catch_that_image() {
   global $post, $posts;

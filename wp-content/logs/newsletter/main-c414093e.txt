@@ -1,0 +1,24 @@
+21-01-2013 14:52:36 - ERROR - Can't DROP 'name'; check that column/key exists
+21-01-2013 14:52:36 - ERROR - Table 'mudarisah.wp_newsletter' doesn't exist
+21-01-2013 14:52:37 - ERROR - Duplicate column name 'message'
+21-01-2013 14:52:37 - ERROR - Duplicate column name 'message_text'
+21-01-2013 14:52:37 - ERROR - Duplicate column name 'subject'
+21-01-2013 14:52:37 - ERROR - Duplicate column name 'type'
+21-01-2013 14:52:37 - ERROR - Duplicate column name 'created'
+21-01-2013 14:52:37 - ERROR - Duplicate column name 'status'
+21-01-2013 14:52:37 - ERROR - Duplicate column name 'total'
+21-01-2013 14:52:37 - ERROR - Duplicate column name 'last_id'
+21-01-2013 14:52:37 - ERROR - Duplicate column name 'sent'
+21-01-2013 14:52:37 - ERROR - Duplicate column name 'send_on'
+21-01-2013 14:52:37 - ERROR - Duplicate column name 'track'
+21-01-2013 14:52:37 - ERROR - Duplicate column name 'editor'
+21-01-2013 14:52:37 - ERROR - Duplicate column name 'sex'
+21-01-2013 14:52:37 - ERROR - Duplicate column name 'query'
+21-01-2013 14:52:37 - ERROR - Duplicate column name 'preferences'
+21-01-2013 14:52:37 - ERROR - Can't DROP 'name'; check that column/key exists
+21-01-2013 14:52:37 - ERROR - Table 'mudarisah.wp_newsletter' doesn't exist
+22-01-2013 15:48:14 - ERROR - Blocked by transient newsletter_main_engine set 145 seconds ago
+22-01-2013 16:53:42 - ERROR - Blocked by transient newsletter_main_engine set 191 seconds ago
+22-01-2013 16:53:47 - ERROR - Blocked by transient newsletter_main_engine set 196 seconds ago
+23-01-2013 16:00:10 - ERROR - Blocked by transient newsletter_main_engine set 240 seconds ago
+23-01-2013 16:13:47 - ERROR - Blocked by transient newsletter_main_engine set 204 seconds ago
