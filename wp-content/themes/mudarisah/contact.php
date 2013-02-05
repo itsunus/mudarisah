@@ -10,7 +10,7 @@
 <div class="inner_content">
     <div class="inner_content_right">
         <div class="inner_content_right">
-            <span class="inner_main_heading">How may we help you?</span>
+            <span class="inner_main_heading"><?php _e('How may we help you?', 'mudarisah'); ?></span>
             <br />
             <br />
             <?php
@@ -83,6 +83,10 @@
             </script>	
 
             <?php
+            $post_id = 202;
+            $post = get_post($post_id);
+            $admin_email = strip_tags($post->post_content);
+
             if (isset($_POST["contact_submit"])) {
                 $name = $_POST["name"];
                 $email = $_POST["email"];
@@ -91,7 +95,7 @@
                 $message = $_POST["message"];
 
                 // multiple recipients
-                $to = 'info@mudarisah.com'; // note the comma
+                $to = $admin_email; // note the comma
                 // subject
                 $subject = 'Visitor Message';
 
@@ -105,21 +109,21 @@
                   <table>
 
                     <tr>
-                      <td><b>Name:</b></td><td>'.$name.'</td>
+                      <td><b>Name:</b></td><td>' . $name . '</td>
                     </tr>
                     tr>
-                      <td><b>Email:</b></td><td>'.$email.'</td>
+                      <td><b>Email:</b></td><td>' . $email . '</td>
                     </tr>
                     
                     <tr>
-                      <td><b>Phone:</b></td><td>'.$phone.'</td>
+                      <td><b>Phone:</b></td><td>' . $phone . '</td>
                     </tr>
                     <tr>
-                      <td><b>Country:</b></td><td>'.$country.'</td>
+                      <td><b>Country:</b></td><td>' . $country . '</td>
                     </tr>
                     
                     <tr>
-                      <td><b>Message:</b></td><td>'.$message.'</td>
+                      <td><b>Message:</b></td><td>' . $message . '</td>
                     </tr>
                     
 
@@ -133,7 +137,7 @@
                 mail($to, $subject, $message, $headers);
                 ?>
 
-                <p>Your message sent successfully. We'll reply you soon. Thank you.</p>
+                <p><?php _e('Your message sent successfully. We will reply you soon. Thank you.', 'mudarisah'); ?></p>
                 <?php
             }
             ?>
@@ -141,46 +145,46 @@
             <form class="wpcf7-form" method="post" action="#">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
-                        <td align="<?php echo $align; ?>">E-mail</td>
-                        <td align="<?php echo $align; ?>">Name</td>
+                        <td align="<?php echo $align; ?>"><?php _e('E-mail', 'mudarisah'); ?></td>
+                        <td align="<?php echo $align; ?>"><?php _e('Name', 'mudarisah'); ?></td>
                     </tr>
                     <tr>
                         <td align="<?php echo $align; ?>">
-                            <input type="text" name="email" id="email" alt="Enter email address" style="width:305px; height:29px;" />
+                            <input type="text" name="email" id="email" alt="<?php _e('Enter email address', 'mudarisah'); ?>" style="width:305px; height:29px;" />
                             <span class="error"></span>
                         </td>
                         <td align="<?php echo $align; ?>">
-                            <input type="text" name="name" id="name" alt="Enter your name" style="width:305px; height:29px;" />
-                            <span class="error"></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="<?php echo $align; ?>" style="padding-top:25px;">Country</td>
-                        <td align="<?php echo $align; ?>" style="padding-top:25px;">Phone</td>
-                    </tr>
-                    <tr>
-                        <td align="<?php echo $align; ?>">
-                            <input type="text" name="country" id="country" alt="Enter your country" style="width:305px; height:29px;" />
-                            <span class="error"></span>
-                        </td>
-                        <td align="<?php echo $align; ?>">
-                            <input type="text" name="phone" id="phone" alt="Enter your phone" style="width:305px; height:29px;" />
+                            <input type="text" name="name" id="name" alt="<?php _e('Enter your name', 'mudarisah'); ?>" style="width:305px; height:29px;" />
                             <span class="error"></span>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" align="<?php echo $align; ?>" style="padding-top:25px;">Your Message</td>
+                        <td align="<?php echo $align; ?>" style="padding-top:25px;"><?php _e('Country', 'mudarisah'); ?></td>
+                        <td align="<?php echo $align; ?>" style="padding-top:25px;"><?php _e('Phone', 'mudarisah'); ?></td>
+                    </tr>
+                    <tr>
+                        <td align="<?php echo $align; ?>">
+                            <input type="text" name="country" id="country" alt="<?php _e('Enter your country', 'mudarisah'); ?>" style="width:305px; height:29px;" />
+                            <span class="error"></span>
+                        </td>
+                        <td align="<?php echo $align; ?>">
+                            <input type="text" name="phone" id="phone" alt="<?php _e('Enter your phone', 'mudarisah'); ?>" style="width:305px; height:29px;" />
+                            <span class="error"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="<?php echo $align; ?>" style="padding-top:25px;"><?php _e('Your Message', 'mudarisah'); ?></td>
                     </tr>
                     <tr>
                         <td colspan="2" align="<?php echo $align; ?>">
-                            <textarea name="message" id="message" cols="45" rows="5" alt="Enter your message" style="width:630px; resize: none;"></textarea>
+                            <textarea name="message" id="message" cols="45" rows="5" alt="<?php _e('Enter your message', 'mudarisah'); ?>" style="width:630px; resize: none;"></textarea>
                             <span class="error"></span>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="2" align="<?php echo $btn_align; ?>" style="padding-top:20px; padding-left:12px;">
 
-                            <input value="Submit" name="contact_submit" id="btnsubmit" class="wpcf7-form-control  wpcf7-submit contact_submitBtn" type="submit">
+                            <input value="<?php _e('Submit', 'mudarisah'); ?>" name="contact_submit" id="btnsubmit" class="wpcf7-form-control  wpcf7-submit contact_submitBtn" type="submit">
 
                         </td>
                     </tr>
@@ -197,7 +201,7 @@
             query_posts('p=106');
             if (have_posts()) : the_post();
                 ?>
-                <div class="inner_newsletter_heading"> Our Location</div>
+                <div class="inner_newsletter_heading"><?php _e('Our Location', 'mudarisah'); ?></div>
                 <div class="inner_newsletter_field" style="font-size:14px;">
                     <?php the_content(); ?>
                 </div>

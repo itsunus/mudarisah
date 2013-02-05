@@ -1,0 +1,104 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mudarisah\n"
+"POT-Creation-Date: 2013-02-02 19:54+0600\n"
+"PO-Revision-Date: 2013-02-02 21:56+0600\n"
+"Last-Translator: Sardar Younus <uu@uu.com>\n"
+"Language-Team:  <info@mudarisah.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"Language: Arabic\n"
+
+msgid "Home"
+msgstr "Home"
+
+msgid "Our Classes"
+msgstr "Our Classes"
+
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+msgid "Methods Training"
+msgstr "Methods Training AR"
+
+msgid "Course A Book"
+msgstr "Course A Book AR"
+
+msgid "Latest News"
+msgstr "Latest News AR"
+
+msgid "Testimonials"
+msgstr "Testimonials AR"
+
+msgid "Learn More"
+msgstr "Learn More AR"
+
+msgid "View All News"
+msgstr "View All News AR"
+
+msgid "Terms of Use"
+msgstr "Terms of Use"
+
+msgid "All Rights Reserved"
+msgstr "All Rights Reserved"
+
+msgid "See what our students are saying"
+msgstr "See what our students are saying"
+
+msgid "Newsletter for Sign Up"
+msgstr "Newsletter for Sign Up AR"
+
+msgid "Connect with Us"
+msgstr "Connect with Us AR"
+
+msgid "How may we help you?"
+msgstr "How may we help you? AR"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Phone"
+msgstr "Phone"
+
+msgid "Country"
+msgstr "Country"
+
+msgid "Your Message"
+msgstr "Your Message"
+
+msgid "Our Location"
+msgstr "Our Location"
+
+msgid "Our Location Map"
+msgstr "Our Location Map"
+
+msgid "Enter your name"
+msgstr "Enter email address"
+
+msgid "Enter your phone"
+msgstr "Enter your country"
+
+msgid "Enter your message"
+msgstr "Enter your message"
+
+msgid "Your message sent successfully. We will reply you soon. Thank you."
+msgstr "Your message sent successfully. We will reply you soon. Thank you."
+
+msgid "Search Listing"
+msgstr "Search Listing"
+
+msgid "Enter your email address"
+msgstr "Enter your email address"
+
+msgid "The field is required"
+msgstr "The field is required"
+
+msgid "Invalid email address"
+msgstr "Invalid email address"

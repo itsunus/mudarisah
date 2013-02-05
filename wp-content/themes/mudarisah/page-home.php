@@ -26,7 +26,7 @@
                         $js_string = "";
                         ?>
 
-                        <?php query_posts('category_name=Home_Slider&showposts=20'); ?>
+                        <?php query_posts('cat=17&showposts=20'); ?>
                         <?php while (have_posts()) : the_post(); ?>
                             <?php
                             $i++;
@@ -57,7 +57,7 @@
 <div class="home_mid_section">
 
 
-    <?php query_posts('category_name=Home_Our_Classes&showposts=1'); ?>
+    <?php query_posts('p=36'); ?>
     <?php while (have_posts()) : the_post(); ?>
         <div class="home_mid_box" style="background:none;">
 
@@ -67,11 +67,11 @@
             <div class="mid_tag"><?php the_title(); ?></div>
             <div class="mid_box_text"><?php echo limit_words(get_the_excerpt(), '10'); ?><br />
                 <br />
-                <a href="<?php the_permalink(); ?>">More Learn </a></div>
+                <a href="<?php the_permalink(); ?>"><?php _e('Learn More','mudarisah');?></a></div>
         </div>
     <?php endwhile; ?>   
 
-    <?php query_posts('category_name=Home_Methods_Training&showposts=1'); ?>
+    <?php query_posts('p=49'); ?>
     <?php while (have_posts()) : the_post(); ?>
         <div class="home_mid_box">
 
@@ -85,7 +85,7 @@
         </div>
     <?php endwhile; ?> 
 
-    <?php query_posts('category_name=Home_Course_A_Book&showposts=1'); ?>
+    <?php query_posts('p=54'); ?>
     <?php while (have_posts()) : the_post(); ?>
         <div class="home_mid_box">
 
@@ -93,42 +93,49 @@
             <div class="mid_tag"><?php the_title(); ?></div>
             <div class="mid_box_text"><?php echo limit_words(get_the_excerpt(), '10'); ?><br />
                 <br />
-                <a href="<?php the_permalink(); ?>">More Learn </a></div>
+                <a href="<?php the_permalink(); ?>"><?php _e('Learn More','mudarisah');?></a></div>
         </div>
     <?php endwhile; ?> 
 
 </div>
 <div class="home_bottom_section">
     <div class="news_section">
-        <div class="latest_news_heading">Latest News</div>
+        <div class="latest_news_heading"><?php _e('Latest News','mudarisah');?></div>
 
         <?php $i = 0; ?>
-        <?php query_posts('category_name=latestnews&showposts=2'); ?>
+        <?php query_posts('cat=5&showposts=2'); ?>
         <?php while (have_posts()) : the_post(); ?>
             <?php $i++; ?>
-            <div class="news_item1" <?php if ($i == 2) echo "style='border:none;'"; ?>>
-                <span>
-                    <?php echo limit_words(get_the_excerpt(), '20'); ?>
-                </span>
-                <a style="float:none;" href="<?php the_permalink(); ?>">Read More</a>
-                <?php the_date('Y-m-d', '<h2>', '</h2>'); ?>
+            <div class="news_item1" <?php if ($i == 2) echo "style='border:none; margin-bottom:0px;'"; ?>>
+                <div class="fullRow">
+
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    <p>
+                    <?php the_excerpt(); ?> 
+                    </p>
+
+                </div>
+                <div class="fullRow">
+                    <?php the_time('F j, Y'); ?>
+                </div>
             </div>
 
         <?php endwhile; ?>  
-        <div class="news_item1" style="border:none;">
+        <div class="fullRow mid_box_text" style="padding-bottom:35px; margin: 0px;">
             <?php
             $category_id = 5;
             $lang_code = substr(get_bloginfo('language'), 0, 2);
             $cat_link = get_category_link($category_id) . "&lang=" . $lang_code;
-            ?> 
-            <a href="<?php echo $cat_link; ?>">View all news </a>
+            ?>            
+            <a href="<?php echo $cat_link; ?>"><?php _e('View all news','mudarisah');?></a>
+            
         </div>
 
     </div>
     <div class="testimonials_section">
-        <div class="testimonials_heading">Testimonials</div>
+        <div class="testimonials_heading"><?php _e('Testimonials','mudarisah');?></div>
         <div class="testimonials_text">
-            <?php query_posts('category_name=Testimonials&showposts=2'); ?>
+            <?php query_posts('cat=9&showposts=2'); ?>
             <?php while (have_posts()) : the_post(); ?>
                 <div class="testi_speech">
                     <?php echo limit_words(get_the_excerpt(), '20'); ?>
@@ -138,14 +145,16 @@
                 </div>
             <?php endwhile; ?>  
 
-            <div class="news_item1" style="border:none;">
-                <?php
-                $category_id = 9;
-                $lang_code = substr(get_bloginfo('language'), 0, 2);
-                $cat_link = get_category_link($category_id) . "&lang=" . $lang_code;
-                ?> 
-                <a href="<?php echo $cat_link; ?>">View all testimonials </a>
+
+            <?php
+            $category_id = 9;
+            $lang_code = substr(get_bloginfo('language'), 0, 2);
+            $cat_link = get_category_link($category_id) . "&lang=" . $lang_code;
+            ?> 
+            <div class="fullRow mid_box_text" style="margin:0px;">
+                <a href="<?php echo $cat_link; ?>"><?php _e('View all testimonials','mudarisah');?></a>
             </div>
+
 
         </div>
     </div>
@@ -164,9 +173,7 @@
             <?php endif; ?>
         </div>
         <div class="footer_right">
-
-            <a href="http://localhost/mudarisah/?page_id=111">Terms of Use |</a>
-            <a href="http://localhost/mudarisah/?page_id=13">Privacy Policy</a>
+            <?php wp_nav_menu( array('menu' => 'footer_menu' )); ?>
         </div>
     </div>
 </div>

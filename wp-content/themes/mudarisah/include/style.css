@@ -1,9 +1,19 @@
 @charset "utf-8";
+@font-face {
+    font-family: 'BellGothicStd-Light';
+    src: url('bellgothicstdlight.eot');
+    src: url('bellgothicstdlight.eot?#iefix') format('embedded-opentype'),
+        url('bellgothicstdlight.woff') format('woff'),
+        url('bellgothicstdlight.ttf') format('truetype'),
+        url('bellgothicstdlight.svg#bellgothicstdlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
-    font-family: "Bell Gothic Std Light";
+    font-family:'BellGothicStd-Light', Arial;
     font-size: 14px;
-    font-weight: bold;
     color: #555555;
+    font-weight: bold;
     direction:rtl;
     margin: 0px;
     padding: 0px;
@@ -32,7 +42,7 @@ div#wrapper {
     float:right;
     width:615px;
     margin-right:25px;
-    margin-top:58px;
+    margin-top:10px;
 }
 
 .home_acitve {
@@ -46,8 +56,8 @@ div#wrapper {
 }
 .input_search_area {
     float: left;
-    width: 193px;
-    margin-top: 58px;
+    width: 196px;
+    margin-top: 62px;
 }
 .input_search_space {
     float: right;
@@ -56,7 +66,7 @@ div#wrapper {
 .input_search_bg {
     background-image: url(../images/input_search_bg.png);
     background-repeat: no-repeat;
-    background-position: right top;
+    background-position: left top;
     height: 30px;
     width: 154px;
     border-top-style: none;
@@ -69,6 +79,10 @@ div#wrapper {
     font-weight: normal;
     color: #666666;
     padding-right: 10px;
+    float: right;
+    outline: 0;
+    outline-style:none;
+    outline-width:0;
 }
 .btn_search {
     float: left;
@@ -92,7 +106,7 @@ div#wrapper {
 .banner_text_heading {
     float: left;
     width: 295px;
-    font-size: 31px;
+    font-size: 28px;
     color: #1b75a0;
     text-align: right;
 }
@@ -101,7 +115,6 @@ div#wrapper {
     color: #555555;
     float: left;
     width: 295px;
-    margin-top: 32px;
     text-align: right;
 }
 .main_banner_area {
@@ -163,7 +176,7 @@ div#wrapper {
     text-decoration:none;
     background-image: url(../images/bullet_link.png);
     background-repeat: no-repeat;
-    background-position: 75px center;
+    background-position: right center;
     padding-right:10px;
 }.home_bottom_section {
     float: left;
@@ -196,7 +209,7 @@ div#wrapper {
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
-.news_section a {
+.news_section a, a {
     color:#1b75a0;
     text-decoration:underline;
 }
@@ -233,13 +246,13 @@ div#wrapper {
 .footer_left {
     float: left;
     width: auto;
-    margin-top: 20px;
+    margin-top: 14px;
 }
 .footer_right {
     text-align: right;
     float: right;
     width: auto;
-    margin-top: 32px;
+    margin-top: 20px;
 }
 .inner_content {
     float: left;
@@ -367,7 +380,7 @@ div#wrapper {
 .contact_textarea{width:630px;}
 .contact_submitBtn{width:71px;height:30px;}
 .footer_right a{color:#B4B5B4;}
-.widget_qtranslate{width:50px;float: right; margin-left: 45px; margin-top: 5px;}
+.widget_qtranslate{width:250px;float: right; margin-right: 28px; margin-top: 5px;}
 
 .testi_speech{
     float: right;
@@ -411,4 +424,122 @@ div#wrapper {
 .wpcf7-form .error{
     color:#1B75A0;
     font-weight: bold;
+}
+
+.search_btn{
+    background-image: url("../images/btn_search.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    width:29px;
+    height:30px;
+    float: right;
+    border:none;
+    cursor: pointer;
+}
+
+
+.fullRow{
+    width:100%;
+    float: right;
+}
+ul.qtrans_language_chooser li{
+    margin:0px 1px;
+    background-color: #e8e8e8;
+}
+
+ul.qtrans_language_chooser li.lang-en a, ul.qtrans_language_chooser li.lang-ar a{
+    text-transform: capitalize !important;
+    border:none;
+    font-size: 12px;
+    text-align: center;
+    margin:5px 10px 0px 10px;
+}
+ul.qtrans_language_chooser li.active a{
+    color:#1B75A0;
+    font-weight: bold;
+}
+
+a.std_saying{
+    text-decoration: none;
+}
+a.std_saying:hover{
+    text-decoration: underline;
+}
+
+.navigation_pagination{
+    width:100%;
+    float:right;
+    margin-top: 5px;
+}
+.wp-pagenavi .pages{
+    display: none;
+}
+
+.wp-pagenavi span, .wp-pagenavi a{
+    padding:0px 5px;
+    border:1px solid #1B75A0;
+    text-decoration: none;
+    margin: 0px 3px;
+}
+
+.footer_right a{
+    text-decoration: none;
+}
+
+.footer_right a:hover{
+    text-decoration: underline;
+}
+
+.home_bottom_section .fullRow a, .home_bottom_section .fullRow a{
+    width: 100%;
+    float: right;
+    text-align: right;
+    text-decoration: none;
+}
+
+.home_bottom_section .fullRow a:hover{
+    text-decoration: underline;
+}
+
+.our_classes1 .heading_our_classes, .our_classes1 p{
+    width:100%;
+    float:right;
+}
+.our_classes1 p{
+    margin:5px 0px;
+}
+
+.our_classes1 p .cls_lbl{
+    width:80px;
+    float:right;
+    text-align: right;
+}
+.our_classes1 p .cls_cln{
+    width:10px;
+    float:right;
+    text-align: right;
+}
+
+.our_classes1 p .cls_val{
+    width:500px;
+    float:right;
+    text-align: right;
+}
+
+.menu-footer_menu-container,.menu-footer_menu-container #menu-footer_menu{
+    float:right;
+    width:400px;
+    margin:4px 0px 0px 0px;
+}
+.menu-footer_menu-container ul li{
+    float:right;
+    list-style: inside;
+    list-style-type: none;
+    text-align: right;
+    border-left:2px solid;
+}
+
+.menu-footer_menu-container ul li:last-child{
+    border-left:none;
+    padding-right:5px;
 }

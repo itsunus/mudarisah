@@ -10,9 +10,7 @@
     
 </div>
 <div class="footer_right">
-    <a href="<?php echo get_bloginfo('url');?>/?page_id=111">Terms of Use |</a>
-    <a href="<?php echo get_bloginfo('url');?>/?page_id=13">Privacy Policy</a>
-     
+    <?php wp_nav_menu( array('menu' => 'footer_menu' )); ?>
 </div>
 </div>
 </div>

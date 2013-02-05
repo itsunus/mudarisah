@@ -9,7 +9,15 @@
         <span style="font-size:11px;"><?php echo get_post_meta($post->ID, 'student_name', true); ?></span>
         <?php endwhile; ?>
     </div>
-    <div class="link_inner_testimonials">See what our students are saying</div>
+    <div class="link_inner_testimonials">
+        <?php
+            $category_id = 18;
+            $lang_code = substr(get_bloginfo('language'), 0, 2);
+            $cat_link = get_category_link($category_id) . "&lang=" . $lang_code;
+            ?> 
+            <a class="std_saying" href="<?php echo $cat_link; ?>">See what our students are saying</a>
+        
+    </div>
 </div>
 
 
@@ -20,7 +28,10 @@
 </div>
 
 <div class="inner_newsletter_area" style="margin-top:15px; border:none;">
-    <div class="inner_newsletter_heading">Connect with Us</div>
-    <div class="inner_newsletter_field"><img src="<?php echo bloginfo("template_directory"); ?>/images/icon_linkedin.jpg" alt="LinkedIn" width="30" height="32" /><img src="<?php echo bloginfo("template_directory"); ?>/images/icon_twitter.jpg" alt="Twitter" width="30" height="32" style="margin-right:10px;" /><img src="<?php echo bloginfo("template_directory"); ?>/images/icon_facebook.jpg" alt="Facebook" width="30" height="32" style="margin-right:10px;" /></div>
+    <div class="inner_newsletter_heading"><?php _e('Connect with Us','mudarisah');?></div>
+    <div class="inner_newsletter_field">
+        <img src="<?php echo bloginfo("template_directory"); ?>/images/icon_linkedin.jpg" alt="LinkedIn" width="30" height="32" />
+        <img src="<?php echo bloginfo("template_directory"); ?>/images/icon_twitter.jpg" alt="Twitter" width="30" height="32" style="margin-right:10px;" />
+        <img src="<?php echo bloginfo("template_directory"); ?>/images/icon_facebook.jpg" alt="Facebook" width="30" height="32" style="margin-right:10px;" /></div>
 </div>
 

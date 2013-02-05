@@ -11,28 +11,36 @@
     <div class="inner_content_right">
         <div class="inner_content_right">
 
-
-            <div class="inner_content_top_heading"><span class="inner_main_heading">Our Classes</span><br />
-                <br />
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat... </div>
+            <?php
+            $post_id = 167;
+            $post = get_post($post_id);
+            ?> 
+            <div class="inner_content_top_heading"><span class="inner_main_heading"><?php echo $post->post_title; ?></span>
+                <p><?php echo $post->post_content; ?></p>
+            </div>
 
             <div class="post_outer">
-                <?php query_posts('category_name=Our_Classes&showposts=3'); ?>
+                <?php 
+                $i = 0;
+                ?>
+                <?php query_posts('cat=3&showposts=3'); ?>
                 <?php while (have_posts()) : the_post(); ?>
-
-                    <div class="our_classes1">
+                    <?php 
+                    $i++;
+                    ?>
+                <div class="our_classes1" style="<?php if($i == 1){echo "margin-top:30px;";}?>">
                         <span class="heading_our_classes"><?php the_title(); ?></span>
                         <p>
-                        <span>Duration :</span><span><?php echo get_post_meta($post->ID, 'duration', true); ?></span>
+                            <span class="cls_lbl"><?php _e('Duration','mudarisah');?></span><span class="cls_cln">:</span><span class="cls_val"><?php echo get_post_meta($post->ID, 'duration', true); ?></span>
                         </p>
                         <p>
-                        <span>Class Type : <?php echo get_post_meta($post->ID, 'class_type', true); ?></span>
+                            <span class="cls_lbl"><?php _e('Class Type','mudarisah');?></span><span class="cls_cln">:</span><span class="cls_val"><?php echo get_post_meta($post->ID, 'class_type', true); ?></span>
                         </p>
                         <p>
-                        <span>Fees : <?php echo get_post_meta($post->ID, 'fees', true); ?></span>
+                            <span class="cls_lbl"><?php _e('Fees','mudarisah');?></span><span class="cls_cln">:</span><span class="cls_val"><?php echo get_post_meta($post->ID, 'fees', true); ?></span>
                         </p>
                         <div>
-                        <?php the_content(); ?>
+                            <?php the_content(); ?>
                         </div>
 
 

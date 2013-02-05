@@ -1,6 +1,16 @@
 @charset "utf-8";
+@font-face {
+    font-family: 'BellGothicStd-Light';
+    src: url('bellgothicstdlight.eot');
+    src: url('bellgothicstdlight.eot?#iefix') format('embedded-opentype'),
+        url('bellgothicstdlight.woff') format('woff'),
+        url('bellgothicstdlight.ttf') format('truetype'),
+        url('bellgothicstdlight.svg#bellgothicstdlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
-    font-family: "Bell Gothic Std Light";
+    font-family:'BellGothicStd-Light', Arial;
     font-size: 14px;
     font-weight: bold;
     color: #555555;
@@ -32,7 +42,7 @@ div#wrapper {
     float:left;
     width:615px;
     margin-left:25px;
-    margin-top:58px;
+    margin-top:10px;
 }
 
 .home_acitve {
@@ -46,17 +56,17 @@ div#wrapper {
 }
 .input_search_area {
     float: right;
-    width: 193px;
-    margin-top: 58px;
+    width: 196px;
+    margin-top: 62px;
 }
 .input_search_space {
     float: left;
     width: 164px;
 }
 .input_search_bg {
-    background-image: url(../images/input_search_bg.png);
+    background-image: url(../images/en_input_search_bg.png);
     background-repeat: no-repeat;
-    background-position: left top;
+    background-position: right top;
     height: 30px;
     width: 154px;
     border-top-style: none;
@@ -69,6 +79,15 @@ div#wrapper {
     font-weight: normal;
     color: #666666;
     padding-left: 10px;
+    float: left;
+    text-align: left;
+    outline: 0;
+    outline-style:none;
+    outline-width:0;
+}
+
+.input_search_bg:blur{
+    border:none
 }
 .btn_search {
     float: right;
@@ -92,7 +111,7 @@ div#wrapper {
 .banner_text_heading {
     float: right;
     width: 295px;
-    font-size: 31px;
+    font-size: 28px;
     color: #1b75a0;
     text-align: left;
 }
@@ -101,7 +120,6 @@ div#wrapper {
     color: #555555;
     float: right;
     width: 295px;
-    margin-top: 32px;
     text-align: left;
 }
 .main_banner_area {
@@ -161,9 +179,9 @@ div#wrapper {
 .mid_box_text a {
     color:#1b75a0;
     text-decoration:none;
-    background-image: url(../images/bullet_link.png);
+    background-image: url(../images/en_bullet_link.png);
     background-repeat: no-repeat;
-    background-position: 75px left;
+    background-position: center left;
     padding-left:10px;
 }.home_bottom_section {
     float: right;
@@ -196,7 +214,7 @@ div#wrapper {
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
-.news_section a {
+.news_section a, a {
     color:#1b75a0;
     text-decoration:underline;
 }
@@ -243,7 +261,7 @@ div#wrapper {
     text-align: right;
     float: right;
     width: auto;
-    margin-top: 8px;
+    margin-top: 12px;
 }
 .inner_content {
     float: right;
@@ -304,7 +322,7 @@ div#wrapper {
 .inner_testimonials_area {
     float: right;
     width: 285px;
-    background-image: url(../images/inner_testimonials_bg.png);
+    background-image: url(../images/en_inner_testimonials_bg.png);
     background-repeat: no-repeat;
     background-position: right top;
     border-bottom-width: 1px;
@@ -323,7 +341,7 @@ div#wrapper {
     float: left;
     width: 260px;
     margin-top: 30px;
-    background-image: url(../images/bullet_link.png);
+    background-image: url(../images/en_bullet_link.png);
     background-repeat: no-repeat;
     background-position: left center;
     padding-left: 10px;
@@ -388,7 +406,7 @@ div#wrapper {
 .contact_textarea{width:630px;}
 .contact_submitBtn{width:71px;height:30px;}
 .footer_left a{color:#B4B5B4;}
-.widget_qtranslate{width:50px;float: left; margin-right: 45px; margin-top: 5px;}
+.widget_qtranslate{width:250px;float: left; margin-left: 28px; margin-top: 5px;}
 
 .testi_speech{
     float: left;
@@ -429,7 +447,7 @@ div#wrapper {
 }
 
 .wysija-submit-field, .contact_submitBtn{
-    background-image: url("../images/bullet_link.png");
+    background-image: url("../images/en_bullet_link.png");
     background-position: left center;
     background-repeat: no-repeat;
     color: #1B75A0;
@@ -447,3 +465,122 @@ div#wrapper {
     color:#1B75A0;
     font-weight: bold;
 }
+
+.search_btn{
+    background-image: url("../images/en_btn_search.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    width:29px;
+    height:30px;
+    float: left;
+    border:none;
+    cursor: pointer;
+    
+}
+
+.fullRow{
+    width:100%;
+    float: left;
+}
+ul.qtrans_language_chooser li{
+    margin:0px 1px;
+    background-color: #e8e8e8;
+}
+
+ul.qtrans_language_chooser li.lang-en a, ul.qtrans_language_chooser li.lang-ar a{
+    text-transform: capitalize !important;
+    border:none;
+    font-size: 12px;
+    text-align: center;
+    margin:5px 10px 0px 10px;
+}
+ul.qtrans_language_chooser li.active a{
+    color:#1B75A0;
+    font-weight: bold;
+}
+
+a.std_saying{
+    text-decoration: none;
+}
+a.std_saying:hover{
+    text-decoration: underline;
+}
+
+.navigation_pagination{
+    width:100%;
+    float:left;
+    margin-top: 5px;
+}
+.wp-pagenavi .pages{
+    display: none;
+}
+
+.wp-pagenavi span, .wp-pagenavi a{
+    padding:0px 5px;
+    border:1px solid #1B75A0;
+    text-decoration: none;
+    margin: 0px 3px;
+}
+
+.footer_right a{
+    text-decoration: none;
+}
+
+.footer_right a:hover{
+    text-decoration: underline;
+}
+
+.home_bottom_section .fullRow a, .home_bottom_section .fullRow a{
+    width: 100%;
+    float: left;
+    text-align: left;
+    text-decoration: none;
+}
+
+.home_bottom_section .fullRow a:hover{
+    text-decoration: underline;
+}
+
+.our_classes1 .heading_our_classes, .our_classes1 p{
+    width:100%;
+    float:left;
+}
+
+.our_classes1 p{
+    margin:5px 0px;
+}
+
+
+.our_classes1 p .cls_lbl{
+    width:80px;
+    float:left;
+    text-align: left;
+}
+.our_classes1 p .cls_cln{
+    width:10px;
+    float:left;
+    text-align: left;
+}
+.our_classes1 p .cls_val{
+    width:500px;
+    float:left;
+    text-align: left;
+}
+.menu-footer_menu-container,.menu-footer_menu-container #menu-footer_menu{
+    float:left;
+    width:400px;
+    margin:4px 0px 0px 0px;
+}
+.menu-footer_menu-container ul li{
+    float:left;
+    list-style: inside;
+    list-style-type: none;
+    text-align: left;
+    border-right:2px solid;
+}
+
+.menu-footer_menu-container ul li:last-child{
+    border-right:none;
+    padding-left:5px;
+}
+

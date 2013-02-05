@@ -3,50 +3,48 @@
     <div class="inner_content_right">
         <div class="inner_content_right">
 
-            <?php if (have_posts()) : ?>
+            <?php
+            $cat_id = get_query_var('cat');
+            $thisCat = get_category($cat_id, false);
+            ?>         
+            <h1>
+                <?php echo $thisCat->name; ?>                        
+            </h1>
+            <div class="post_outer">
+                <?php $cnt = 0; ?>
+                <?php
+                if (have_posts()) :
+                    while (have_posts()) :
+                        the_post();
 
-                <header class="page-header">
-                    <h1 class="page-title"><?php
-            printf(__('Category Archives: %s', 'mudarisah'), '<span>' . single_cat_title('', false) . '</span>');
-                ?></h1>
+                        $cnt++;
+                        ?>
 
-                    <?php
-                    $category_description = category_description();
-                    if (!empty($category_description))
-                        echo apply_filters('category_archive_meta', '<div class="category-archive-meta">' . $category_description . '</div>');
-                    ?>
-                </header>
-
-
-                <?php /* Start the Loop */ ?>
-                <?php while (have_posts()) : the_post(); ?>
-
-                    <?php
-                    /* Include the Post-Format-specific template for the content.
-                     * If you want to overload this in a child theme then include a file
-                     * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                     */
-                    get_template_part('content', get_post_format());
-                    ?>
-
-                <?php endwhile; ?>
+                        <div class="our_classes1" style=" <?php
+                if ($cnt == 1) {
+                    echo "margin-top: 0px;";
+                }
+                        ?> ">
+                            <span class="heading_our_classes"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
+                            <div class="contain">
+                                <?php the_excerpt(); ?> 
+                            </div>               
+                        </div>
 
 
 
-            <?php else : ?>
+                    <?php endwhile; ?> 
+                    <div class="navigation_pagination">
+                        <?php wp_pagenavi(); ?>
+                    </div>
 
-                <article id="post-0" class="post no-results not-found">
-                    <header class="entry-header">
-                        <h1 class="entry-title"><?php _e('Nothing Found', 'mudarisah'); ?></h1>
-                    </header><!-- .entry-header -->
 
-                    <div class="entry-content">
-                        <p><?php _e('Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'twentyeleven'); ?></p>
-                        <?php get_search_form(); ?>
-                    </div><!-- .entry-content -->
-                </article><!-- #post-0 -->
+                <?php else: ?>
 
-            <?php endif; ?>
+                    <h2><?php _e('No item found.','mudarisah');?></h2>
+
+                <?php endif; ?>
+            </div>
 
         </div>
     </div>
