@@ -13,7 +13,7 @@
         <?php
             $category_id = 18;
             $lang_code = substr(get_bloginfo('language'), 0, 2);
-            $cat_link = get_category_link($category_id) . "&lang=" . $lang_code;
+            $cat_link = get_category_link($category_id);
             ?> 
             <a class="std_saying" href="<?php echo $cat_link; ?>">See what our students are saying</a>
         

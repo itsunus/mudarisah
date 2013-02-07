@@ -81,7 +81,7 @@
             <div class="mid_tag"><?php the_title(); ?></div>
             <div class="mid_box_text"><?php echo limit_words(get_the_excerpt(), '10'); ?><br />
                 <br />
-                <a href="<?php the_permalink(); ?>">More Learn </a></div>
+                <a href="<?php the_permalink(); ?>"><?php _e('Learn More','mudarisah');?></a></div>
         </div>
     <?php endwhile; ?> 
 
@@ -116,7 +116,12 @@
 
                 </div>
                 <div class="fullRow">
-                    <?php the_time('F j, Y'); ?>
+                    <?php 
+                        $local_timestamp = get_the_time('U'); 
+                        $datetime = date("F j, Y, g:i A", $local_timestamp);
+                        echo $datetime;
+                    ?>
+                    
                 </div>
             </div>
 

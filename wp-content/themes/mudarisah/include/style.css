@@ -543,3 +543,6 @@ a.std_saying:hover{
     border-left:none;
     padding-right:5px;
 }
+.current-menu-item a{
+    color:#1B75A0 !important;
+}
